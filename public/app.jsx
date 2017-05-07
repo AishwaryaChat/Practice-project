@@ -1,4 +1,9 @@
 const Greeter = React.createClass({
+  getDefaultProps: function () { // wil set dafault props for the class
+    return {
+      name: 'React'
+    }
+  },
   render: function () {
     const name = this.props.name // accessing properties passed to the class
     return (
