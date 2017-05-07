@@ -15,7 +15,9 @@ const Greeter = React.createClass({
   }
 })
 
+const firstName = 'Aishwarya' // passing a variable in props
+
 ReactDOM.render(
-  <Greeter name='Aishwarya' />,
+  <Greeter name={firstName} />,
   document.getElementById('app')
 )
