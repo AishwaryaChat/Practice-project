@@ -7,6 +7,14 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
+    modules: [__dirname, 'node_modules'],
+    // speifies the absolute path of each file in the project, which will help in not specifying the path again
+    // and agin when requiring the particular file
+    alias: {
+      Greeter: 'public/components/Greeter.jsx',
+      GreeterForm: 'public/components/GreeterForm.jsx',
+      GreeterMessage: 'public/components/GreeterMessage.jsx'
+    },
     extensions: ['*', '.js', '.jsx'] // list of file extensions that we want to process
   },
   module: {
